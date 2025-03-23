@@ -27,6 +27,8 @@ spec:
             value: ecommerce
 
 
+
+
 ---
 # Service para expor a aplicação FakeShop externamente (NodePort)
 apiVersion: v1
@@ -39,6 +41,8 @@ spec:
   - port: 5432        # Porta do serviço dentro do cluster
   selector:
     app: postgre
+
+
 
 
 ---
@@ -72,6 +76,7 @@ spec:
               value: ecommerce
             - name: FLASK_APP
               value: index.py
+
 
 ---
 # Service para expor a aplicação FakeShop externamente (NodePort)
