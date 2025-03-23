@@ -80,9 +80,8 @@ kind: Service
 metadata:
   name: fakeshop
 spec:
-  type: LoadBalancer
+  type: NodePort
   ports:
-    - port: 80 #recebo na 80
-      targetPort: 5000 #encaminho para 5000
+  - port: 5000        # Porta do serviço dentro do cluster
   selector:
     app: fakeshop
